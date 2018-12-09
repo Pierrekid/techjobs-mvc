@@ -36,6 +36,14 @@
 
     <hr />
 
+    <table th:fragment="JobListing" class="job-listing" th:each="job : ${jobs}">
+        <tbody>
+        <tr th:each="section : ${job}">
+            <th scope="row" th:text="${section.getKey()}"></th>
+                <td th:text="${section.getValue()}"></td>
+        </tr>
+        </tbody>
+    </table>
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
 
 </div>
